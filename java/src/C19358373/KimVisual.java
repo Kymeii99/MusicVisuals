@@ -4,6 +4,8 @@ import ie.tudublin.VisualException;
 
 public class KimVisual extends Visual{
    
+    CircleCube c;
+
     public void settings()
     {
         size(800, 500, P3D);
@@ -19,6 +21,7 @@ public class KimVisual extends Visual{
         loadAudio("java/data/RAS.mp3");
         //startListening(); 
 
+        c = new CircleCube(this);
     }
 
     int input = 0;
@@ -65,6 +68,7 @@ public class KimVisual extends Visual{
             //waveform
             case 1:
             {
+                c.render();
                 break;
             }
             case 2:
