@@ -6,6 +6,7 @@ public class KimVisual extends Visual{
    
     CircleCube c;
     Planet p;
+    Stars s;
 
     public void settings()
     {
@@ -24,6 +25,7 @@ public class KimVisual extends Visual{
 
         c = new CircleCube(this);
         p = new Planet(this);
+        s = new Stars(this);
     }
 
     int input = 0;
@@ -76,6 +78,7 @@ public class KimVisual extends Visual{
             case 2:
             {
                 p.render();
+                s.render();
                 break;
             }
             case 3:
