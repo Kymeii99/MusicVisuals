@@ -5,6 +5,7 @@ import ie.tudublin.VisualException;
 public class KimVisual extends Visual{
    
     CircleCube c;
+    Planet p;
 
     public void settings()
     {
@@ -22,6 +23,7 @@ public class KimVisual extends Visual{
         //startListening(); 
 
         c = new CircleCube(this);
+        p = new Planet(this);
     }
 
     int input = 0;
@@ -73,6 +75,7 @@ public class KimVisual extends Visual{
             }
             case 2:
             {
+                p.render();
                 break;
             }
             case 3:
