@@ -9,6 +9,8 @@ public class BridgeScene {
     }
     
     int x = 0;
+    int cloudLeft = 300;
+    int cloudRight = 470;
 
     public void render()
     {
@@ -16,13 +18,30 @@ public class BridgeScene {
         float halfH = kt.height / 2;
         int car = 20;
         int windows = -5;
+
+
         //Sky Color
         kt.background(255,155,162);
         
+        //Clouds
+        kt.noStroke();
+        kt.fill(209);
+
+        //left cloud
+        kt.ellipse(cloudLeft, 170, 126, 97);
+        kt.ellipse(cloudLeft + 62, 170, 70, 60);
+        kt.ellipse(cloudLeft - 62, 170, 70, 60);
+        
+        //right cloud
+        kt.ellipse(cloudRight, 100, 126, 97);
+        kt.ellipse(cloudRight + 62, 100, 70, 60);
+        kt.ellipse(cloudRight - 62, 100, 70, 60);
+
         //The Sun
         kt.fill(255);
         kt.noStroke();
         kt.circle(halfW,140 + (kt.smothedAmplitude * 50),103 + (kt.smothedAmplitude * 50));
+
 
         //The Rays of the sun, gradient effect
         kt.fill(255,15);
@@ -89,6 +108,19 @@ public class BridgeScene {
         if ( x >= kt.width + 500)
         {
             x = 0;
+        }
+
+        //Checking Clouds movement
+        cloudLeft= cloudLeft - 1;
+        cloudRight= cloudRight + 1;
+
+        if(cloudRight >= kt.width + 300)
+        {
+            cloudRight = 470;
+        }
+        if(cloudLeft <= -330)
+        {
+            cloudLeft = 300;
         }
     }
 }
