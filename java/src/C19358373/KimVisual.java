@@ -10,6 +10,7 @@ public class KimVisual extends Visual{
     Planet p;
     Stars s;
     Airplane a;
+    SnowScene scene;
     ArrayList<SnowFall> snow = new ArrayList<SnowFall>();
 
     public void settings()
@@ -31,8 +32,9 @@ public class KimVisual extends Visual{
         p = new Planet(this);
         s = new Stars(this);
         a = new Airplane(this);
+        scene = new SnowScene(this);
 
-        for ( int i = 0; i < 5; i++)
+        for ( int i = 0; i < 10; i++)
         {
             snow.add(new SnowFall(this, width, height));
         }
@@ -56,8 +58,6 @@ public class KimVisual extends Visual{
             }
         }
     }
-    
-    float[] particles;
 
     public void draw()
     {
@@ -103,6 +103,7 @@ public class KimVisual extends Visual{
                 {
                     snow.draw();
                 }
+                scene.render();
                 break;
             }
         }

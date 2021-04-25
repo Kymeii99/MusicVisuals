@@ -11,15 +11,14 @@ public class SnowFall {
         this.kt = kt;
         this.width = width;
         this.height = height;
-
     }
-    
-    void draw() {
 
+    void draw() {
         float x = kt.random(width);
         float y = kt.random(height);
         float r = kt.random(10);
 
+        kt.noStroke();
         kt.fill(255);
         kt.ellipse(x, y, r, r);
         y++;
