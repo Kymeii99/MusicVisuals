@@ -1,5 +1,4 @@
 package C19358373;
-import java.util.ArrayList;
 
 import ie.tudublin.Visual;
 import ie.tudublin.VisualException;
