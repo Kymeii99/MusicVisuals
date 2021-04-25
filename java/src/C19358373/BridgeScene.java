@@ -11,6 +11,7 @@ public class BridgeScene {
     int x = 0;
     int cloudLeft = 300;
     int cloudRight = 470;
+    int boat =  0;
 
     public void render()
     {
@@ -63,11 +64,25 @@ public class BridgeScene {
         kt.noStroke();
         kt.triangle(0, halfH + 100 , 0, halfH - 100, halfW, halfH + 100);
         kt.triangle(kt.width, halfH + 100 , kt.width, halfH - 100, halfW - 60, halfH + 100);
-
+        
         //Water
         kt.fill(0,119,182);
         kt.rect(0, halfH + 100 - (kt.smothedAmplitude * 100), kt.width , 200 );
         
+        //Boat
+        kt.fill(270,160,170);
+        kt.rect(kt.width - 200 + boat, halfH + 150, 90, 40);
+        kt.rect(kt.width - 190 + boat, halfH + 130, 70, 40);
+
+        //The edges of the boat
+        kt.triangle(kt.width - 250+ boat, halfH + 150, kt.width - 200+ boat, halfH + 150, kt.width - 200+ boat, halfH + 190);
+        kt.triangle(kt.width - 60+ boat, halfH + 150, kt.width - 200+ boat, halfH + 150, kt.width - 110+ boat, halfH + 190);
+
+        //Boat Windows
+        kt.fill(0,119,182);
+        kt.rect(kt.width -180+ boat, halfH + 135, 20, 10);
+        kt.rect(kt.width -150+ boat, halfH + 135, 20, 10);
+
         //car
         kt.fill(0, 150);
         for ( int i = 0; i <= 4 ; i++)
@@ -121,6 +136,13 @@ public class BridgeScene {
         if(cloudLeft <= -330)
         {
             cloudLeft = 300;
+        }
+
+        //Boat
+        boat = boat - 1;
+        if ( boat <= -kt.width)
+        {
+            boat = 150;
         }
     }
 }
