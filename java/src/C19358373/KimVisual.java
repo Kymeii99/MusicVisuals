@@ -10,8 +10,11 @@ public class KimVisual extends Visual{
     Planet p;
     Stars s;
     Airplane a;
-    SnowScene scene;
-    ArrayList<SnowFall> snow = new ArrayList<SnowFall>();
+    BridgeScene b;
+
+    /*Removed*/
+    // SnowScene scene;
+    // ArrayList<SnowFall> snow = new ArrayList<SnowFall>();
 
     public void settings()
     {
@@ -32,12 +35,12 @@ public class KimVisual extends Visual{
         p = new Planet(this);
         s = new Stars(this);
         a = new Airplane(this);
-        scene = new SnowScene(this);
+        b = new BridgeScene(this);
 
-        for ( int i = 0; i < 10; i++)
-        {
-            snow.add(new SnowFall(this, width, height));
-        }
+        // for ( int i = 0; i < 10; i++)
+        // {
+        //     snow.add(new SnowFall(this, width, height));
+        // }
     }
 
     int input = 0;
@@ -99,11 +102,12 @@ public class KimVisual extends Visual{
             }
             case 4:
             {
-                for (SnowFall snow : snow)
-                {
-                    snow.draw();
-                }
-                scene.render();
+                // for (SnowFall snow : snow)
+                // {
+                //     snow.draw();
+                // }
+                // scene.render();
+                b.render();
                 break;
             }
         }
