@@ -41,13 +41,13 @@ public class BridgeScene {
         //The Sun
         kt.fill(255);
         kt.noStroke();
-        kt.circle(halfW,140 + (kt.smothedAmplitude * 50),103 + (kt.smothedAmplitude * 50));
+        kt.circle(halfW,140 + (kt.smothedAmplitude * 70),103 + (kt.smothedAmplitude * 70));
 
 
         //The Rays of the sun, gradient effect
         kt.fill(255,15);
         kt.noStroke();
-        kt.circle(halfW,140 + (kt.smothedAmplitude * 50),113 + (kt.smothedAmplitude * 50));
+        kt.circle(halfW,140 + (kt.smothedAmplitude * 70),113 + (kt.smothedAmplitude * 70));
 
         int sunrays = 0;
         
@@ -55,7 +55,7 @@ public class BridgeScene {
         {
             kt.fill(255,15);
             kt.noStroke();
-            kt.circle(halfW,140 + (kt.smothedAmplitude * 50),123 + sunrays + (kt.smothedAmplitude * 50));
+            kt.circle(halfW,140 + (kt.smothedAmplitude * 70),123 + sunrays + (kt.smothedAmplitude * 70));
             sunrays += 10;
         }
         
@@ -138,7 +138,7 @@ public class BridgeScene {
             cloudLeft = 300;
         }
 
-        //Boat
+        //Moving Boat
         boat = boat - 1;
         if ( boat <= -kt.width)
         {
