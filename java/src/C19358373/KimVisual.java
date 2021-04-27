@@ -10,6 +10,7 @@ public class KimVisual extends Visual{
     Stars s;
     Airplane a;
     BridgeScene b;
+    menu m;
 
     /*Removed*/
     // SnowScene scene;
@@ -35,6 +36,7 @@ public class KimVisual extends Visual{
         s = new Stars(this);
         a = new Airplane(this);
         b = new BridgeScene(this);
+        m = new menu(this);
 
         // for ( int i = 0; i < 10; i++)
         // {
@@ -63,7 +65,8 @@ public class KimVisual extends Visual{
 
     public void draw()
     {
-        background(0);
+
+        m.render();
         try
         {
             // Call this if you want to use FFT data
@@ -81,7 +84,6 @@ public class KimVisual extends Visual{
 
         switch(input)
         {
-            //waveform
             case 1:
             {
                 c.render();

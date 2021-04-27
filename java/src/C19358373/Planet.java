@@ -18,6 +18,7 @@ public class Planet {
     float noiseScale = 0.02f;
 
     public void render(){
+        kt.background(0);
         kt.lights();
         kt.strokeWeight(1);
         float c = PApplet.map(kt.amplitude, 0, 1 , 0 , 255);

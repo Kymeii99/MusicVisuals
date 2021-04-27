@@ -12,8 +12,9 @@ public class CircleCube {
 
     float angle = 0;
     float angle2 = 0;
+    
     public void render() {
-        
+        kt.background(0);
         int numCircles = 12;
         int Mwidth = 140;
 
