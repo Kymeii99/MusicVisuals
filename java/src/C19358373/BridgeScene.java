@@ -41,13 +41,13 @@ public class BridgeScene {
         //The Sun
         kt.fill(255);
         kt.noStroke();
-        kt.circle(halfW,140 + (kt.smothedAmplitude * 70),103 + (kt.smothedAmplitude * 70));
+        kt.circle(halfW,halfH + (kt.smothedAmplitude * 70),200 + (kt.smothedAmplitude * 70));
 
 
         //The Rays of the sun, gradient effect
         kt.fill(255,15);
         kt.noStroke();
-        kt.circle(halfW,140 + (kt.smothedAmplitude * 70),113 + (kt.smothedAmplitude * 70));
+        kt.circle(halfW,halfH + (kt.smothedAmplitude * 70),213 + (kt.smothedAmplitude * 70));
 
         int sunrays = 0;
         
@@ -55,7 +55,7 @@ public class BridgeScene {
         {
             kt.fill(255,15);
             kt.noStroke();
-            kt.circle(halfW,140 + (kt.smothedAmplitude * 70),123 + sunrays + (kt.smothedAmplitude * 70));
+            kt.circle(halfW,halfH + (kt.smothedAmplitude * 70),223 + sunrays + (kt.smothedAmplitude * 70));
             sunrays += 10;
         }
         
@@ -83,7 +83,13 @@ public class BridgeScene {
         kt.rect(kt.width -180+ boat, halfH + 135, 20, 10);
         kt.rect(kt.width -150+ boat, halfH + 135, 20, 10);
 
-        //car
+        //Bubbles from boat
+        kt.fill(255);
+        kt.ellipse(kt.width - 70 + (boat), kt.height - 70, 10 + (kt.smothedAmplitude * 30), 10+ (kt.smothedAmplitude * 30));
+        kt.ellipse(kt.width - 50 + (boat), kt.height - 80, 15 + (kt.smothedAmplitude * 30), 15+ (kt.smothedAmplitude * 30));
+        kt.ellipse(kt.width - 30 + (boat), kt.height - 90, 19+ (kt.smothedAmplitude * 30), 19+ (kt.smothedAmplitude * 30));
+
+        //Cars
         kt.fill(0, 150);
         for ( int i = 0; i <= 4 ; i++)
         {
@@ -101,7 +107,7 @@ public class BridgeScene {
 
 
         //Bridge
-        kt.fill(255, 150);
+        kt.fill(167);
         kt.rect(0, halfH, kt.width, 2);
 
         //Flooring of bridge
@@ -111,11 +117,22 @@ public class BridgeScene {
         //Line from the right and left of the bridge
         kt.stroke(0);
         kt.strokeWeight(2);
-        kt.line(0, halfH, 40, halfH + 50);
+        int boatLine1 = 0;
+        for (int i = 0; i <= 7 ; i++)
+        {
+           kt.line(0 + boatLine1, halfH, 40 + boatLine1, halfH + 50);
+           boatLine1+=100;
+        }
+        
 
         kt.stroke(0);
         kt.strokeWeight(2);
-        kt.line(kt.width, halfH, kt.width - 40, halfH + 50);
+        int boatLine2 = 0;
+        for (int i = 0; i<= 7 ; i++)
+        {
+            kt.line(800 - boatLine2, halfH, 760 - boatLine2, halfH + 50);
+            boatLine2+=100;
+        }
 
 
         // Moving the cars
