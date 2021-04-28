@@ -12,9 +12,7 @@ public class KimVisual extends Visual{
     BridgeScene b;
     menu m;
 
-    /*Removed*/
-    // SnowScene scene;
-    // ArrayList<SnowFall> snow = new ArrayList<SnowFall>();
+    boolean start = false;
 
     public void settings()
     {
@@ -37,11 +35,6 @@ public class KimVisual extends Visual{
         a = new Airplane(this);
         b = new BridgeScene(this);
         m = new menu(this);
-
-        // for ( int i = 0; i < 10; i++)
-        // {
-        //     snow.add(new SnowFall(this, width, height));
-        // }
     }
 
     int input = 0;
@@ -60,13 +53,13 @@ public class KimVisual extends Visual{
                 ap.rewind();
                 ap.play();
             }
+            start = true;
+            input = 1;
         }
     }
 
     public void draw()
-    {
-
-        m.render();
+    {   
         try
         {
             // Call this if you want to use FFT data
@@ -82,36 +75,37 @@ public class KimVisual extends Visual{
         // Call this is you want to get the average amplitude
         calculateAverageAmplitude();   
 
-        switch(input)
+        if (start == false)
         {
-            case 1:
+           m.render(); 
+           s.render();
+        }
+        else {
+            switch(input)
             {
-                c.render();
-                break;
-            }
-            case 2:
-            {
-                p.render();
-                s.render();
-                break;
-            }
-            case 3:
-            {
-                a.render();
-                s.render();
-                break;
-            }
-            case 4:
-            {
-                // for (SnowFall snow : snow)
-                // {
-                //     snow.draw();
-                // }
-                // scene.render();
-                b.render();
-                break;
+                case 1:
+                {
+                    c.render();
+                    break;
+                }
+                case 2:
+                {
+                    p.render();
+                    s.render();
+                    break;
+                }
+                case 3:
+                {
+                    a.render();
+                    s.render();
+                    break;
+                }
+                case 4:
+                {
+                    b.render();
+                    break;
+                }
             }
         }
-        
     }
 }

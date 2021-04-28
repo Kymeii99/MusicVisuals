@@ -41,13 +41,13 @@ public class BridgeScene {
         //The Sun
         kt.fill(255);
         kt.noStroke();
-        kt.circle(halfW,halfH + (kt.smothedAmplitude * 70),200 + (kt.smothedAmplitude * 70));
+        kt.circle(halfW,halfH + (kt.getSmoothedAmplitude() * 70),200 + (kt.getSmoothedAmplitude() * 70));
 
 
         //The Rays of the sun, gradient effect
         kt.fill(255,15);
         kt.noStroke();
-        kt.circle(halfW,halfH + (kt.smothedAmplitude * 70),213 + (kt.smothedAmplitude * 70));
+        kt.circle(halfW,halfH + (kt.getSmoothedAmplitude() * 70),213 + (kt.getSmoothedAmplitude() * 70));
 
         int sunrays = 0;
         
@@ -55,7 +55,7 @@ public class BridgeScene {
         {
             kt.fill(255,15);
             kt.noStroke();
-            kt.circle(halfW,halfH + (kt.smothedAmplitude * 70),223 + sunrays + (kt.smothedAmplitude * 70));
+            kt.circle(halfW,halfH + (kt.getSmoothedAmplitude() * 70),223 + sunrays + (kt.getSmoothedAmplitude() * 70));
             sunrays += 10;
         }
         
@@ -67,7 +67,7 @@ public class BridgeScene {
         
         //Water
         kt.fill(0,119,182);
-        kt.rect(0, halfH + 100 - (kt.smothedAmplitude * 100), kt.width , 200 );
+        kt.rect(0, halfH + 100 - (kt.getSmoothedAmplitude() * 100), kt.width , 200 );
         
         //Boat
         kt.fill(270,160,170);
@@ -85,9 +85,9 @@ public class BridgeScene {
 
         //Bubbles from boat
         kt.fill(255);
-        kt.ellipse(kt.width - 70 + (boat), kt.height - 70, 10 + (kt.smothedAmplitude * 30), 10+ (kt.smothedAmplitude * 30));
-        kt.ellipse(kt.width - 50 + (boat), kt.height - 80, 15 + (kt.smothedAmplitude * 30), 15+ (kt.smothedAmplitude * 30));
-        kt.ellipse(kt.width - 30 + (boat), kt.height - 90, 19+ (kt.smothedAmplitude * 30), 19+ (kt.smothedAmplitude * 30));
+        kt.ellipse(kt.width - 70 + (boat), kt.height - 70, 10 + (kt.getSmoothedAmplitude() * 30), 10+ (kt.getSmoothedAmplitude() * 30));
+        kt.ellipse(kt.width - 50 + (boat), kt.height - 80, 15 + (kt.getSmoothedAmplitude() * 30), 15+ (kt.getSmoothedAmplitude() * 30));
+        kt.ellipse(kt.width - 30 + (boat), kt.height - 90, 19+ (kt.getSmoothedAmplitude() * 30), 19+ (kt.getSmoothedAmplitude() * 30));
 
         //Cars
         kt.fill(0, 150);

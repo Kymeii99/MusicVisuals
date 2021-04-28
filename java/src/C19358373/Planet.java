@@ -21,13 +21,13 @@ public class Planet {
         kt.background(0);
         kt.lights();
         kt.strokeWeight(1);
-        float c = PApplet.map(kt.amplitude, 0, 1 , 0 , 255);
+        float c = PApplet.map(kt.getAmplitude(), 0, 1 , 0 , 255);
         kt.stroke(c,255,255);
         kt.noFill();
 
         angle += 0.007f;
         reverse -= 0.001f;
-        float s = 40 + ( 100 * kt.smothedAmplitude * 8);
+        float s = 40 + ( 100 * kt.getSmoothedAmplitude() * 8);
        
         kt.pushMatrix();
             //planet - rotate
@@ -40,20 +40,20 @@ public class Planet {
             int numCircles = 5;
             for (int i = 0 ; i < numCircles; i++)
             {
-                kt.ellipse(0 , 0 ,  100 * i + (kt.smothedAmplitude * 1200), 100 * i + (kt.smothedAmplitude * 1200));
+                kt.ellipse(0 , 0 ,  100 * i + (kt.getSmoothedAmplitude() * 1200), 100 * i + (kt.getSmoothedAmplitude() * 1200));
             }
 
             kt.stroke(255);
             kt.noFill();
-            kt.ellipse(kt.width / 2 , kt.height / 2  ,  50  + (kt.smothedAmplitude * 500), 50  + (kt.smothedAmplitude * 500));
-            kt.ellipse(-kt.width / 2  , kt.height / 2  ,  50  + (kt.smothedAmplitude * 500), 50  + (kt.smothedAmplitude * 500));
-            kt.ellipse(-kt.width / 2  , -kt.height / 2  ,  50  + (kt.smothedAmplitude * 500), 50  + (kt.smothedAmplitude * 500));
-            kt.ellipse(kt.width / 2  , -kt.height / 2  ,  50  + (kt.smothedAmplitude * 500), 50  + (kt.smothedAmplitude * 500));
+            kt.ellipse(kt.width / 2 , kt.height / 2  ,  50  + (kt.getSmoothedAmplitude() * 500), 50  + (kt.getSmoothedAmplitude() * 500));
+            kt.ellipse(-kt.width / 2  , kt.height / 2  ,  50  + (kt.getSmoothedAmplitude() * 500), 50  + (kt.getSmoothedAmplitude() * 500));
+            kt.ellipse(-kt.width / 2  , -kt.height / 2  ,  50  + (kt.getSmoothedAmplitude() * 500), 50  + (kt.getSmoothedAmplitude() * 500));
+            kt.ellipse(kt.width / 2  , -kt.height / 2  ,  50  + (kt.getSmoothedAmplitude() * 500), 50  + (kt.getSmoothedAmplitude() * 500));
     
-            kt.ellipse(kt.width / 2 , kt.height / 2  ,  25  + (kt.smothedAmplitude * 500), 25  + (kt.smothedAmplitude * 500));
-            kt.ellipse(-kt.width / 2  , kt.height / 2  ,  25  + (kt.smothedAmplitude * 500), 25  + (kt.smothedAmplitude * 500));
-            kt.ellipse(-kt.width / 2  , -kt.height / 2  ,  25  + (kt.smothedAmplitude * 500), 25  + (kt.smothedAmplitude * 500));
-            kt.ellipse(kt.width / 2  , -kt.height / 2  ,  25  + (kt.smothedAmplitude * 500), 25  + (kt.smothedAmplitude * 500));
+            kt.ellipse(kt.width / 2 , kt.height / 2  ,  25  + (kt.getSmoothedAmplitude() * 500), 25  + (kt.getSmoothedAmplitude() * 500));
+            kt.ellipse(-kt.width / 2  , kt.height / 2  ,  25  + (kt.getSmoothedAmplitude() * 500), 25  + (kt.getSmoothedAmplitude() * 500));
+            kt.ellipse(-kt.width / 2  , -kt.height / 2  ,  25  + (kt.getSmoothedAmplitude() * 500), 25  + (kt.getSmoothedAmplitude() * 500));
+            kt.ellipse(kt.width / 2  , -kt.height / 2  ,  25  + (kt.getSmoothedAmplitude() * 500), 25  + (kt.getSmoothedAmplitude() * 500));
         kt.popMatrix();
 
         kt.pushMatrix();
@@ -62,18 +62,18 @@ public class Planet {
             
             kt.stroke(255);
             kt.noFill();
-            kt.ellipse(kt.width / 2 , kt.height / 2  ,  25  + (kt.smothedAmplitude * 500), 25  + (kt.smothedAmplitude * 500));
-            kt.ellipse(-kt.width / 2  , kt.height / 2  ,  25  + (kt.smothedAmplitude * 500), 25  + (kt.smothedAmplitude * 500));
-            kt.ellipse(-kt.width / 2  , -kt.height / 2  ,  25  + (kt.smothedAmplitude * 500), 25  + (kt.smothedAmplitude * 500));
-            kt.ellipse(kt.width / 2  , -kt.height / 2  ,  25  + (kt.smothedAmplitude * 500), 25  + (kt.smothedAmplitude * 500));
+            kt.ellipse(kt.width / 2 , kt.height / 2  ,  25  + (kt.getSmoothedAmplitude() * 500), 25  + (kt.getSmoothedAmplitude() * 500));
+            kt.ellipse(-kt.width / 2  , kt.height / 2  ,  25  + (kt.getSmoothedAmplitude() * 500), 25  + (kt.getSmoothedAmplitude() * 500));
+            kt.ellipse(-kt.width / 2  , -kt.height / 2  ,  25  + (kt.getSmoothedAmplitude() * 500), 25  + (kt.getSmoothedAmplitude() * 500));
+            kt.ellipse(kt.width / 2  , -kt.height / 2  ,  25  + (kt.getSmoothedAmplitude() * 500), 25  + (kt.getSmoothedAmplitude() * 500));
 
-            kt.ellipse(kt.width / 2 , kt.height / 2  ,  50  + (kt.smothedAmplitude * 500), 50  + (kt.smothedAmplitude * 500));
-            kt.ellipse(-kt.width / 2  , kt.height / 2  ,  50  + (kt.smothedAmplitude * 500), 50  + (kt.smothedAmplitude * 500));
-            kt.ellipse(-kt.width / 2  , -kt.height / 2  ,  50  + (kt.smothedAmplitude * 500), 50  + (kt.smothedAmplitude * 500));
-            kt.ellipse(kt.width / 2  , -kt.height / 2  ,  50  + (kt.smothedAmplitude * 500), 50  + (kt.smothedAmplitude * 500));
+            kt.ellipse(kt.width / 2 , kt.height / 2  ,  50  + (kt.getSmoothedAmplitude() * 500), 50  + (kt.getSmoothedAmplitude() * 500));
+            kt.ellipse(-kt.width / 2  , kt.height / 2  ,  50  + (kt.getSmoothedAmplitude() * 500), 50  + (kt.getSmoothedAmplitude() * 500));
+            kt.ellipse(-kt.width / 2  , -kt.height / 2  ,  50  + (kt.getSmoothedAmplitude() * 500), 50  + (kt.getSmoothedAmplitude() * 500));
+            kt.ellipse(kt.width / 2  , -kt.height / 2  ,  50  + (kt.getSmoothedAmplitude() * 500), 50  + (kt.getSmoothedAmplitude() * 500));
             
             //other sphere
-            float p = PApplet.map(kt.amplitude, 0, 1 , 0 , 255);
+            float p = PApplet.map(kt.getAmplitude(), 0, 1 , 0 , 255);
             kt.stroke(p,200,200);
             kt.noFill();
             kt.sphere(s);

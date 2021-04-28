@@ -18,14 +18,14 @@ public class CircleCube {
         int numCircles = 12;
         int Mwidth = 140;
 
-        float c = PApplet.map(kt.amplitude, 0, 1 , 0 , 255);
+        float c = PApplet.map(kt.getAmplitude(), 0, 1 , 0 , 255);
         //circles
         for ( int i = 0 ; i < numCircles ; i++)
         {
             kt.stroke(c * i, 255, 255);
             kt.strokeWeight(2);
             kt.noFill();
-            kt.ellipse(kt.width / 2 , kt.height / 2 ,  Mwidth + (kt.smothedAmplitude * 500), Mwidth + (kt.smothedAmplitude * 500));
+            kt.ellipse(kt.width / 2 , kt.height / 2 ,  Mwidth + (kt.getSmoothedAmplitude() * 500), Mwidth + (kt.getSmoothedAmplitude() * 500));
             Mwidth += 70;
         }
 
@@ -36,8 +36,8 @@ public class CircleCube {
 
         angle += 0.01f;
         angle2 -= 0.02f;
-        float s = 40 + ( 100 * kt.smothedAmplitude * 10);
-        float s1 = 20 + ( 100 * kt.smothedAmplitude * 10);
+        float s = 40 + ( 100 * kt.getSmoothedAmplitude() * 10);
+        float s1 = 20 + ( 100 * kt.getSmoothedAmplitude() * 10);
         kt.translate(kt.width / 2, kt.height / 2);
 
         //cubes

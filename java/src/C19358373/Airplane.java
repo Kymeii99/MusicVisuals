@@ -134,7 +134,7 @@ public class Airplane {
 
         //Moon
         kt.fill(255);
-        kt.ellipse( 40 , 70, 50 + (kt.smothedAmplitude * 500), 50 +  (kt.smothedAmplitude * 500));
+        kt.ellipse( 40 , 70, 50 + (kt.getSmoothedAmplitude() * 500), 50 +  (kt.getSmoothedAmplitude() * 500));
         kt.noFill();
 
         //moving the plane
