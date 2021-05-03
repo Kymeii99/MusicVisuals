@@ -64,6 +64,7 @@ public class BridgeScene {
             sunrays += 10;
         }
         
+        //Bands behind the bridge
         float gap = kt.width / (float) kt.getBands().length;
         kt.noStroke();
         for(int i = 0 ; i < kt.getBands().length ; i ++)

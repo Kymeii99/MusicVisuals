@@ -15,7 +15,9 @@ public class Airplane {
 
     public void render()
     {
+        //Changing Background color to beat
         kt.background(300 * (kt.getAmplitude()));
+        
         kt.noStroke();
         kt.fill(255);
 

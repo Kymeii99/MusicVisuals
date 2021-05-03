@@ -1,3 +1,7 @@
+/* 
+Student Number : C19358373
+Student Name : Kim Thai */
+
 package C19358373;
 
 import ie.tudublin.Visual;
