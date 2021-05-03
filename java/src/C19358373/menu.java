@@ -1,5 +1,6 @@
 package C19358373;
 
+import ddf.minim.analysis.FFT;
 import processing.core.PApplet;
 
 public class menu {
@@ -15,12 +16,12 @@ public class menu {
         kt.background(0);
 
         String title = "Welcome!";
-        String subtitle = "Press space to start/pause:";
+        String subtitle = "Press space to start/restart:";
+        String notice = "Please start before Pressing!";
         String key1 = "Press 1: Circle Cube";
         String key2 = "Press 2: Planet";
         String key3 = "Press 3: Airplane";
         String key4 = "Press 4: Bridge Scenery";
-        String notice = "Please start first before pressing!";
 
         kt.textAlign(PApplet.CENTER,PApplet.CENTER);
         kt.textSize(30);
@@ -28,7 +29,7 @@ public class menu {
         kt.text(title, kt.width / 2, kt.height / 2 - 100);
         kt.textSize(25);
         kt.text(subtitle, kt.width / 2, kt.height / 2 - 30);
-
+        
         kt.textSize(20);
         kt.fill(255);
         kt.text(notice, kt.width / 2, kt.height / 2 + 10);

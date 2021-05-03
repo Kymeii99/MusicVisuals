@@ -15,7 +15,7 @@ public class Airplane {
 
     public void render()
     {
-        kt.background(300);
+        kt.background(300 * (kt.getAmplitude()));
         kt.noStroke();
         kt.fill(255);
 

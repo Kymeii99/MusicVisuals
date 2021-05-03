@@ -1,11 +1,15 @@
 package C19358373;
 
+import processing.core.PApplet;
+
 public class BridgeScene {
     KimVisual kt;
+    float cy;
 
     public BridgeScene(KimVisual kt)
     {
         this.kt = kt;
+        cy = this.kt.height / 2;
     }
     
     int x = 0;
@@ -38,6 +42,7 @@ public class BridgeScene {
         kt.ellipse(cloudRight + 62, 100, 70, 60);
         kt.ellipse(cloudRight - 62, 100, 70, 60);
 
+
         //The Sun
         kt.fill(255);
         kt.noStroke();
@@ -59,6 +64,14 @@ public class BridgeScene {
             sunrays += 10;
         }
         
+        float gap = kt.width / (float) kt.getBands().length;
+        kt.noStroke();
+        for(int i = 0 ; i < kt.getBands().length ; i ++)
+        {
+            kt.fill(PApplet.map(i, 0, kt.getBands().length, 255, 0), 155,162);
+            kt.rect(i * gap, kt.height/2 + 50, gap,-kt.getSmoothedBands()[i] * 0.5f); 
+        }
+
         //Moutains
         kt.fill(102,86,53);
         kt.noStroke();
