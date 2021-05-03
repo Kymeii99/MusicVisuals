@@ -7,7 +7,7 @@ Student Number: C19358373
 # Description of the assignment
 The Assignment I was given was to create "Something beautiful to enjoy while listening to music".
 
-This is a music visualizer to the song "Raining All Summer" - Fragile lofi. There are four scenes for this assignment. I've used 3D and 2D shapes for this assignment which changes in size and colours. First One are a multiple circles and 2 cubes reacting to the music beat. Second one is a scene of the planet with rings rotating around it. The third one is an Airplane flying across buildings and lastly, this is a bridge scene with cars , moutains , sun and an audio band.
+This is a music visualizer to the song "Raining All Summer" - Fragile lofi. I wanted to make something relaxing that the users can listen and watch so i've created four scenes for this assignment. I've used 3D and 2D shapes for this assignment which changes in size and colours. First One are a multiple circles and 2 cubes reacting to the music beat. Second one is a scene of the planet with rings rotating around it. The third one is an Airplane flying across buildings and lastly, this is a bridge scene with cars , moutains , sun and an audio band.
 # Instructions
 At The start you'll be greet to a menu screen. This will explain how the project works. You'll be greet with a Welcome and then list of keys that you would need to know to start the visualizer. To be able to start and restart the visualizer you will need to press the **spacebar key** , to change to different scenes you will need to hit the keys from **1 - 4.** 
 
@@ -115,6 +115,7 @@ The part that i'm most proud of my assignment is the Bridge Scene, I spent the m
 I figured that making the sun and bubbles expand in size responding the the music makes it more pleasing to watch, to achieve this I had played around with the get amplitude method.I liked how the sun and the water moved to the beat of the music and also the Audio Bands behind the bridge. One part of the assignment that took me a bit longer to figure out was to make the cars boat respond outside of the frame of the window so that it doesn't look like they appeared out of nowhere, I wanted to make it look like they are in a loop.
 
 # Images
+These are the images of each of the four scenes including the menu.
 Menu:
 ![An image](images/menu.png)
 
@@ -131,4 +132,4 @@ Key 4: Bridge Scene
 ![An image](images/p4.png)
 
 # The Youtube Video
-This is the Youtube [Video Link](https://www.youtube.com/watch?v=E1_bpTQQxz4&ab_channel=kimthai)
+This is the Youtube [Video Link](https://www.youtube.com/watch?v=E1_bpTQQxz4&ab_channel=kimthai) to the project running.
